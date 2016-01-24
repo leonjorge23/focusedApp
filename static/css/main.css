@@ -1,0 +1,123 @@
+/* Jorge Leon Changes
+*/
+
+/* utilities */
+.txt-link{
+  text-decoration: underline;
+}
+
+/* end of utilities */
+
+h1.cover-heading {
+  font-size: 86px;
+}
+
+#chronoExample button {
+  border: none;
+  background: none;
+  font-size: 38px;
+}
+
+.marg-top-30{
+  margin-top: 30px;
+}
+.panel-default>.panel-heading {
+  color: #fff;
+  background-color: #444;
+  border-color: #555;
+}
+.panel-default {
+  border-color: #0e0e0e;
+}
+input#taskAtHand {
+  width: 345px;
+  margin-left: 15px;
+}
+.panel {
+  background-color: #222;
+}
+li.list-group-item {
+  color: #444;
+  font-size: 18px;
+}
+.form-control {
+  color: #1A8E69;
+  font-weight: bold;
+  font-size: 18px;
+}
+form button {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+/* ng-hide used on the messages */
+.default{
+  opacity: 1;
+}
+
+.fade{
+  -webkit-transition: opacity 2s; /* For Safari 3.1 to 6.0 */
+  transition: opacity 2s;
+  opacity: 0;
+}
+
+.save-session {
+  text-align: right;
+}
+.session-lists{
+margin-top: -10px;
+text-decoration: underline;
+}
+.save-session a i {
+  text-decoration: none;
+  margin-left: 5px;
+  font-size: 22px;
+}
+.save-session a {
+  cursor: pointer;
+}
+.session-lists li{
+  text-align: left;
+  list-style: none;
+}
+.session-lists li i{
+  color: #1A8E69;
+  margin-right: 10px;
+}
+.session-lists li span{
+  display: inline-block;
+  -ms-word-break: normal;
+  word-break: normal;
+}
+.mastfoot, .masthead{
+  postion: relative !important;
+}
+.masthead {
+  margin-bottom: 60px;
+}
+.trash-icon {
+  position: absolute;
+  top: -8px;
+  right: 6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.trash-icon i {
+  font-size: 16px;
+  color: #444;
+}
+.session-header{
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px){
+  .masthead, .mastfoot {
+    position: relative !important;
+  }
+  .site-wrapper-inner {
+    vertical-align: top;
+  }
+}

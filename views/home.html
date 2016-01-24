@@ -1,0 +1,33 @@
+<div id="chronoExample">
+	<h1 class="values cover-heading">25:00</h1>
+	<div>
+		<button class="startButton"><i class="fa fa-play-circle"></i></button>
+		<button class="pauseButton" ><i class="fa fa-pause"></i></button>
+		<button class="stopButton"><i class="fa fa-stop"></i></button>
+	</div>
+</div>
+
+<div class="alert alert-success" role="alert"
+		 ng-show="message"
+		 ng-bind="message"
+		 ng-class="{fade: startFade}"></div>
+
+<div class="panel panel-default marg-top-30">
+	<div class="panel-heading">
+		<form ng-submit="addTask()" name="addTask" class="form-inline" novalidate>
+			<div class="form-group">
+				<label for="taskAtHand">Working on: </label>
+				<input type="text" class="form-control" name="taskname" id="taskAtHand" placeholder="Goal or Task Here..." ng-model="taskname" ng-required="true">
+				<button type="submit" id="submitTask" ng-disabled="addTask.$invalid"><i class="fa fa-plus-square"></i></button>
+			</div>
+		</form>
+	</div>
+	<div class="panel-body">
+		<h2>Completed Tasks: </h2>
+		<!-- List group -->
+		<ul class="list-group task-list">
+			<li class="list-group-item" ng-repeat="(key, record) in currentTasks">{{record.task}} <i class="fa fa-times-circle" ng-click="deleteTask(key)"></i></li>
+		</ul>
+	</div>
+</div>
+<p class="save-session" ng-show="currentUser"><a ng-click="addSession(key)">Save Session<i class="fa fa-cloud-upload"></i></a></p>

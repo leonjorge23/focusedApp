@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="session-header">
+		<h2>{{sessionMessage}}{{currentUser.firstname}}!</h2>
+		<a ng-show="noSessions" class="txt-link" ng-href="#/">Start Tracking!</a>
+	</div>
+	<div class="col-sm-6" ng-repeat="(key, session) in tasks | orderBy: date:true">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{session.date| date:'MM/dd/yyyy @ h:mma'}} </h3>
+				<div class="trash-icon"><i ng-click="deleteSession(key)" class="fa fa-trash"></i></div>
+			</div>
+			<div class="panel-body session-lists" >
+				<li ng-repeat="name in session.tasks | limitTo: 10 as results"><i class="fa fa-check"></i><span>{{name.task}}</span></li>
+			</div>
+		</div>
+	</div>
+
+</div>

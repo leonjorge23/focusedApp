@@ -1,0 +1,29 @@
+<h2>Login Form</h2>
+<p>Please login to save your tasks</p>
+<p ng-bind="message"></p>
+<form class="form-horizontal" name="loginForm"  ng-submit="login()" novalidate>
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+			<input type="email" class="form-control" id="email" placeholder="Email" ng-model="user.email" ng-required="true">
+			<p class="error validationerror"
+				 ng-show="loginForm.email.$invalid && loginForm.email.$touched">
+				Must be a valid email</p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="password" class="col-sm-2 control-label">Password</label>
+		<div class="col-sm-10">
+			<input type="password" name="password" class="form-control" id="password" placeholder="Password" ng-model="user.password" ng-required="true">
+			<p class="error validationerror"
+				 ng-show="loginForm.password.$invalid && loginForm.password.$touched">
+				Password is required</p>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default" ng-disabled="loginForm.$invalid">Login</button>
+			<p>or <a ng-href="#/register">Register</a></p>
+		</div>
+	</div>
+</form>
