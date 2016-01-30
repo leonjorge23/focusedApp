@@ -1,4 +1,10 @@
-myApp.factory('chronoService', function () {
+myApp.factory('chronoService', ['ngAudio', function (ngAudio) {
+
+	function buzz() { // using buzz.js
+		var mySound = ngAudio.load("../static/sounds/newmessage.mp3");
+
+		mySound.play();
+	}
 
 	function init(){
 		// EasyTymer Chronometer
@@ -18,10 +24,14 @@ myApp.factory('chronoService', function () {
 		timer.addEventListener('started', function (e) {
 			$('#chronoExample .values').html(timer.getTimeValues().toString());
 		});
+		timer.addEventListener('targetAchieved', function (e) {
+			buzz();
+		});
 	}
 
 	 return {
 		 init: init
 	 }
 
-})
+}]);
+
